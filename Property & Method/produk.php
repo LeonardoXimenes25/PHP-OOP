@@ -39,10 +39,6 @@ $produk->penulis = 'Masashi Kishimoto';
 $produk->penerbit = 'Shonem Jump';
 $produk->harga = 10000;
 
-// echo "Komik: $produk->penulis, $produk->penerbit";
-// echo "<br>";
-// echo $produk->getLabel();
-
 // Games
 $produk2 = new Produk();
 $produk2->judul = "Uncharted";
