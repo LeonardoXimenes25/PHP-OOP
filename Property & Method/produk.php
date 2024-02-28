@@ -21,12 +21,36 @@
 <?php 
 
 class Produk {
-    public $judul, 
-           $penulis, 
-           $penerbit, 
-           $harga;
+    public $judul = 'judul', 
+           $penulis = 'penulis', 
+           $penerbit = 'penerbit', 
+           $harga = 0;
+
+    public function getLabel() {
+        return "$this->penulis, $this->penerbit";
+    }
 }
 
-$produk = new Produk();
 
-var_dump($produk);
+// komik
+$produk = new Produk();
+$produk->judul = 'Naruto';
+$produk->penulis = 'Masashi Kishimoto';
+$produk->penerbit = 'Shonem Jump';
+$produk->harga = 10000;
+
+// echo "Komik: $produk->penulis, $produk->penerbit";
+// echo "<br>";
+// echo $produk->getLabel();
+
+// Games
+$produk2 = new Produk();
+$produk2->judul = "Uncharted";
+$produk2->penulis = "Neil Druckmann";
+$produk2->penerbit = "Sony Company";
+$produk2->harga = 1000;
+
+echo "Komik : " .$produk->getLabel();
+echo "<br>";
+echo "Games: " . $produk2->getLabel();
+
